@@ -14,4 +14,15 @@ conn.connect(function(err) {
   console.log("Connected!");
 });
 
-module.exports = conn;
+conn.query("SELECT * FROM inventory", (err, results, fields) => {
+  if (err) {
+      console.log(err)
+  } else {
+      console.log(results);
+      return results;
+  };
+}); // returns everything!!! from the inventory table in the products db
+
+conn.end();
+
+// module.exports = conn;
