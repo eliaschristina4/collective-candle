@@ -1,0 +1,86 @@
+.Shop h1 {
+    display: block;
+    margin: 0 auto 25px auto;
+    font-family: "Passions Conflict";
+    font-size: 4em;
+    text-align: center;
+    color: #3F4E4F;
+}
+
+/* GRID */
+/* grid-row-start / grid-column-start / grid-row-end / grid-column-end */
+
+.inventory-container {
+    display: grid;
+    grid-template-columns: repeat(3, 310px);
+    grid-template-rows: repeat(4);
+    column-gap: 40px;
+    row-gap: 50px;
+    justify-content: center;
+}
+
+#product-1 {
+    grid-area: 1 / 1 / 2 / 2;
+}
+
+#product-2 {
+    grid-area: 1 / 2 / 2 / 3;
+}
+
+#product-3 {
+    grid-area: 1 / 3 / 2 / 4;
+}
+
+/* responsiveness */
+
+@media screen and (max-width: 1015px) {
+    /* GRID */
+    .inventory-container {
+        display: grid;
+        grid-template-columns: repeat(2, 310px);
+        grid-template-rows: repeat(6);
+        column-gap: 40px;
+        row-gap: 50px;
+        justify-content: center;
+    }
+    
+    #product-1 {
+        grid-area: 1 / 1 / 2 / 2;
+    }
+    
+    #product-2 {
+        grid-area: 1 / 2 / 2 / 3;
+    }
+    
+    #product-3 {
+        grid-area: 2 / 1 / 3 / 2;
+    }  
+}
+
+
+@media screen and (max-width: 670px) {
+
+    /* GRID */
+    .inventory-container {
+        display: grid;
+        grid-template-columns: repeat(1, 100%);
+        grid-template-rows: repeat(12);
+        row-gap: 50px;
+        justify-content: center;
+        text-align: center;
+        
+    } 
+    
+    #product-1 {
+        grid-area: 1 / 1 / 2 / 2;
+    }
+    
+    #product-2 {
+        grid-area: 2 / 1 / 2 / 2;
+    }
+    
+        
+    #product-3 {
+        grid-area: 3 / 1 / 4 / 2;
+    }    
+}

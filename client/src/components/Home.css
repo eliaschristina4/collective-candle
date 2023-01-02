@@ -1,0 +1,77 @@
+.top {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 50px;
+    padding: 0 200px;
+}
+
+.top-left {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 50%;
+}
+
+/* .top-right {
+    width: 50%;
+} */
+
+h1 {
+    font-family: "Passions Conflict";
+    font-size: 4em;
+    text-align: center;
+    color: #3F4E4F;
+
+    
+    /* margin: 0 auto 25px auto; */
+    /* width: 50%; */
+}
+
+.top-left p {
+    text-align: center;
+}
+
+.middle {
+    display: flex;
+    justify-content: center;
+}
+
+.middle img {
+    width: 50%;
+    object-fit: none;
+    margin-bottom: 50px;
+}
+
+.bottom {
+    display: flex;
+    justify-content: space-around;
+    padding: 0 200px;
+}
+
+.bottom h2, p {
+    text-align: center;
+}
+
+h2 {
+    font-family: "Passions Conflict";
+    font-size: 4em;
+    font-weight: bold;
+    color:#A27B5C
+}
+
+button {
+    font-family: "Playfair Display", serif;
+    font-weight: bold;
+    color: #2C3639;
+    background-color: #A27B5C;
+    border: 4px solid #DCD7C9;
+    border-radius: 20px;
+    display: block;
+    padding: 10px 20px;
+    margin: 20px auto 0 auto;
+}
+
+button:hover {
+    color: #A27B5C;
+    background-color: #DCD7C9;
+}

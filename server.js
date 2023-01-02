@@ -41,7 +41,7 @@ app.get('/db', (req, res) => {
     conn.query("SELECT * FROM inventory;", (err, results, fields) => {
         if(err) throw err;
         res.send(results);
-        console.log(results[0]);
+        // console.log(results);
     });
 }); // could break down into separate queries for individual rows or columns instead of grabbing the info all at once. 
 // would that make it easier to plug into react components? I'm not so sure
@@ -60,9 +60,6 @@ app.listen(PORT, () => {
 
 
 // Express Routes - TEST
-// app.get('/', (req, res) => {
-//     res.json( {message: "idk what\'s happening here but ok"});
-// });
 
 // app.get('/api', (req, res) => {
 //     res.json( { message: 'Hello from the server!' } );
