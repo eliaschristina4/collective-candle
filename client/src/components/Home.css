@@ -2,7 +2,7 @@
     display: flex;
     justify-content: space-around;
     margin-bottom: 50px;
-    padding: 0 200px;
+    padding: 0 auto;
 }
 
 .top-left {
@@ -74,4 +74,8 @@ button {
 button:hover {
     color: #A27B5C;
     background-color: #DCD7C9;
+}
+
+@media screen and (max-width:865px) {
+    
 }

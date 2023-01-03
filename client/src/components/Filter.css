@@ -15,9 +15,9 @@ div .Filter {
     width: 100%;
 }
 
-.type {
+/* .type {
 
-}
+} */
 
 .price{
     margin-bottom: 40px;
@@ -31,6 +31,20 @@ input[type=button] {
     font-weight: bold;
     color: white;
     background-color: #3F4E4F;
-    border: 1px solid white;
+    border: 3px solid white;
     border-radius: 15px;
+}
+
+input[type=button]:hover {
+    color: #3F4E4F;
+    background-color: white;
+    border: 3px solid #3F4E4F;
+    font-weight: bold;
+}
+
+input[type=button].active {
+    color: #3F4E4F;
+    background-color: white;
+    border: 3px solid #3F4E4F;
+    font-weight: bold;
 }
