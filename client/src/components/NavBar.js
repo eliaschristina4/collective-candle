@@ -1,4 +1,5 @@
 import './NavBar.css';
+import CustomLink from './CustomLink';
 
 export default function Navbar(){
 
@@ -30,13 +31,13 @@ export default function Navbar(){
     )
 }
 
-const CustomLink = ( {href, children, ...props} ) => {
+// const CustomLink = ( {href, children, ...props} ) => {
 
-    const path = window.location.pathname;
+//     const path = window.location.pathname;
 
-    return(
-        <li>
-            <a href={href} {...props} className={path === href ? "active" : ''}>{children}</a>
-        </li>
-    )
-}
+//     return(
+//         <li>
+//             <a href={href} {...props} className={path === href ? "active" : ''}>{children}</a>
+//         </li>
+//     )
+// }

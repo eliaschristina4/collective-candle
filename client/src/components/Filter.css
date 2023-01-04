@@ -7,17 +7,26 @@ div .Filter {
     padding: 0;
 }
 
-.sort-by{
+.sort-by, .button-container {
     display: flex;
-    flex-direction: row;
     justify-content: center;
+}
+.sort-by {
+    flex-direction: column;
+    justify-content: center;
+}
+
+span {
+    font-size: 1em;
+    text-align: center;
+}
+
+.button-container{
+    flex-direction: row;
+    flex-wrap: wrap;
     margin: 10px auto;
     width: 100%;
 }
-
-/* .type {
-
-} */
 
 .price{
     margin-bottom: 40px;

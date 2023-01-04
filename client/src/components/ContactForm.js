@@ -1,9 +1,9 @@
-import './Form.css';
+import './ContactForm.css';
 
 // if time: https://www.w3schools.com/react/react_forms.asp
 // form handling
 
-export default function Form(){
+export default function ContactForm(){
 
     return(
         <div className='form-container'>

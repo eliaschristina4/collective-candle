@@ -36,3 +36,12 @@ button:hover {
     color: #A27B5C;
     background-color: #DCD7C9;
 }
+
+@media screen and (max-width: 300px) {
+    .product {
+        max-width: 100%;
+    }
+    .product img {
+        max-width: 100%;
+    }
+}

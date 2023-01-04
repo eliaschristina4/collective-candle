@@ -1,5 +1,5 @@
 import './Contact.css';
-import Form from './Form';
+import ContactForm from './ContactForm';
 
 export default function Contact(){
 
@@ -8,7 +8,7 @@ export default function Contact(){
             
             <h1>Contact Us</h1>
             
-            <Form />
+            <ContactForm />
     
         </div>
     )

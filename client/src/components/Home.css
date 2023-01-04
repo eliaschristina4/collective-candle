@@ -1,20 +1,27 @@
-.top {
-    display: flex;
-    justify-content: space-around;
-    margin-bottom: 50px;
-    padding: 0 auto;
+.top-right div.Slider, .bottom-left div.Slider {
+    width: 400px;
 }
 
-.top-left {
+.top {
     display: flex;
-    flex-direction: column;
+    justify-content: center;
+    margin-bottom: 50px;
+    padding: 0 100px;
+}
+
+.top-left, .top-right {
+    display: flex;
     justify-content: center;
     width: 50%;
 }
 
-/* .top-right {
-    width: 50%;
-} */
+.top-left {
+    flex-direction: row;
+}
+
+.top-right {
+    flex-direction: column;
+}
 
 h1 {
     font-family: "Passions Conflict";
@@ -25,10 +32,6 @@ h1 {
     
     /* margin: 0 auto 25px auto; */
     /* width: 50%; */
-}
-
-.top-left p {
-    text-align: center;
 }
 
 .middle {
@@ -44,8 +47,17 @@ h1 {
 
 .bottom {
     display: flex;
-    justify-content: space-around;
-    padding: 0 200px;
+    justify-content: space-evenly;
+    padding: 0 100px;
+}
+
+.bottom-left, .bottom-right {
+    width: 50%;
+}
+
+.bottom-right {
+    flex-direction: row;
+    justify-content: center;
 }
 
 .bottom h2, p {
@@ -76,6 +88,120 @@ button:hover {
     background-color: #DCD7C9;
 }
 
-@media screen and (max-width:865px) {
-    
+/* for CustomLink thing (Shop Now button) */
+li {
+   list-style: none; 
+} 
+
+@media screen and (max-width:995px) {
+    .top {
+        padding: 0 50px;
+    }
+    .middle img {
+        width: 70%;
+    }
+    .bottom {
+        padding: 0 50px;
+    }
+
+}
+
+@media screen and (max-width:890px) {
+    .top {
+        padding: 0 20px;
+    }
+    .middle img {
+        width: 70%;
+    }
+    .bottom {
+        padding: 0 20px;
+    }
+}
+
+@media screen and (max-width:830px) {
+    .SliderWax {
+        width: 300px;
+    }
+    .top {
+        padding: 0 15px;
+    }
+    .top-left {
+        padding-right: 20px;
+    }
+    h1 {
+        font-size: 3em;
+    }
+    .top-right {
+        padding-left: 20px;
+    }
+    /* .middle img {
+        width: 80%;
+    } */
+    div .middle, .middle img {
+        display: block;
+        width: 100%;
+        padding: 0;
+        margin: 0;
+        margin-bottom: 30px;
+    }
+    .bottom {
+        padding: 0 20px;
+    }
+    .bottom-left {
+        padding-right: 20px;
+    }
+    .bottom-right {
+        padding-left: 20px;
+    }
+}
+
+@media screen and (max-width:765px) {
+    .top {
+        flex-direction: column;
+    }
+    .top-left, .top-right {
+        width: 100%;
+        padding: 0;
+    }
+    .top-right {
+        width: 70%;
+        margin: 25px auto;
+        
+    }
+    .bottom-left, .bottom-right {
+        width: auto;
+    }
+}
+
+@media screen and (max-width:690px) {
+    .top {
+        margin-bottom: 30px;
+    }
+    /* div .middle, .middle img {
+        display: block;
+        width: 100%;
+        padding: 0;
+        margin: 0;
+    } */
+    .bottom {
+        flex-direction: column;
+        justify-content: center;
+        padding: 0;
+        margin: 0;
+    }
+    h2 {
+        margin-top: 0;
+    }
+    .bottom-left, .bottom-right {
+        padding: 0
+    }
+    .bottom-right {
+        width: 100%;
+        margin: 40px auto;
+    }
+    .bottom-right div.Slider {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+    }
 }
