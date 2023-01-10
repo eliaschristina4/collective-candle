@@ -1,4 +1,4 @@
-// TRUCO: You need to npm start both backend AND frontend to get shit working wowza. must be running CONCURRENTLYYY
+// you need to npm start both backend AND frontend. must be running CONCURRENTLYYYY
 
 // Creating Express app
 const express = require('express');
@@ -14,8 +14,9 @@ app.use(cors());
 // Enabling use of and access to .env file
 require('dotenv').config();
 
-// Not sure exactly lol
 app.use(express.json());
+
+// telling app where to find the frontend files to serve up
 app.use(express.static("../client/src"));
 
 // MySQL Database access
@@ -36,7 +37,7 @@ conn.connect(function(err) {
     console.log("Connected to database");
 });
   
-// Queries  
+// Get request and query inside db
 app.get('/db', (req, res) => {
     conn.query("SELECT * FROM inventory;", (err, results, fields) => {
         if(err) throw err;
@@ -44,27 +45,14 @@ app.get('/db', (req, res) => {
         // console.log(results);
     });
 }); // could break down into separate queries for individual rows or columns instead of grabbing the info all at once. 
-// would that make it easier to plug into react components? I'm not so sure
+// redo to make filters easier
 
 // Ending the database connection
 // conn.end(() => {
 //     console.log('Database connection ended');
 // });
 
-// Listening on the pre-established server port (above)
+// Listening on the port 
 app.listen(PORT, () => {
     console.log(`Server listening on port ${PORT}`);
 });
-
-
-
-
-// Express Routes - TEST
-
-// app.get('/api', (req, res) => {
-//     res.json( { message: 'Hello from the server!' } );
-// });
-
-// app.get('/express_backend', (req, res) => { //Line 9
-//     res.send({ express: 'YOUR EXPRESS BACKEND IS CONNECTED TO REACT' }); //Line 10
-//   });

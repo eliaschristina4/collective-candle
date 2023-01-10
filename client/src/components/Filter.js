@@ -6,8 +6,9 @@ export default function Filter({setActive, active, setFiltered, filtered, setInv
     useEffect(() => {
         if(active === '*'){
             setFiltered(inventory);
-            return;
+            return; 
         }
+        // if the productCategory includes the active category set by the buttons below, add it to the filtered array which we map thru in the Shop component
         const filtered = inventory.filter((product) => product.productCategory.includes(active))
 
         setFiltered(filtered);

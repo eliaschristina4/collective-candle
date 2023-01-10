@@ -4,22 +4,22 @@ import Product from './Product';
 import Filter from './Filter'; 
 
 export default function Shop () {
-    // category filter
+    // for category filter
     const [inventory, setInventory] = useState([]);
     const [filtered, setFiltered] = useState([]);
     const [active, setActive] = useState('*');
 
+    // after rendering, runs the fetch function below 
     useEffect(() => {
         fetchInventory();
     }, []);
     
-    function fetchInventory(){ // fetching from MySQL db
+    function fetchInventory(){ // fetching from mysql db
         fetch('/db')
             .then((response) => response.json())
             .then((data) => {
-                setInventory(data);
-                setFiltered(data);
-                // setFilteredPrice(data);
+                setInventory(data); // setting data to inventory variable
+                setFiltered(data); // setting data to filtered variable as default
                 
                 console.log(data);
             })
@@ -35,6 +35,7 @@ export default function Shop () {
             <div className='Shop'>
                 <h1>Shop Our Products</h1>
                 
+                {/* passing the state variable and update functions as props to the Filter component */}
                 <Filter 
                     inventory={inventory} 
                     setInventory={setInventory}
@@ -43,7 +44,7 @@ export default function Shop () {
                     setActive={setActive} 
                     />
 
-                 {/* map thru the filtered inventory and plug into Product component for display */}
+                {/* map thru the filtered array and plug into Product component for display */}
                 <div className='inventory-container'> 
                     {filtered.map(product => (
                         <Product

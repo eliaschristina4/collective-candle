@@ -10,6 +10,7 @@ function App() {
 
     let Component;
 
+    // if the pathname = any of these options, let the Component variable  = relevant component
     switch ( window.location.pathname ) {
         case '/':
           Component = Home
@@ -29,6 +30,7 @@ function App() {
         <NavBar />
 
         <div className='main-container'>
+          {/* where we render the component that matches the pathname */}
           <Component />
         </div>
 

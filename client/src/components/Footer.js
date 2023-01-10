@@ -1,23 +1,22 @@
 import './Footer.css';
+import CustomLink from './CustomLink';
 
 export default function Footer(){
     return(
     <nav className='Footer'>
         
-            
+        {/* footer nav links -- could've used regular anchor tags*/}
         <div className='footer-layer-1'>
             <ul className='site-links'>
-                <li>
-                    <a href='/'>Home</a>
-                </li>
-                <li>
-                    <a href='/shop'>Shop</a>
-                </li>
-                <li>
-                    <a href='/contact'>Contact Us</a>
-                </li>
+                <CustomLink href='/'>Home</CustomLink>
+                <CustomLink href='/shop'>Shop</CustomLink>
+                <CustomLink href='/contact'>Contact Us</CustomLink>
+                {/* <li> <a href='/'>Home</a> </li>
+                <li> <a href='/shop'>Shop</a> </li>
+                <li> <a href='/contact'>Contact Us</a> </li> */}
             </ul>
 
+            {/* social media links & imgs */}
             <ul className='socials'>
                 <li>
                     <a href='https://www.facebook.com/'>
@@ -36,7 +35,8 @@ export default function Footer(){
                 </li>
             </ul>
         </div>
-
+        
+        {/* footer logo */}
         <div className='footer-layer-2'>
                 <a href='/' className='site-title'>
                     <img src='../../images/logos/logo-playfair-display.png' alt='collective candle co logo' id='footer-logo' />
