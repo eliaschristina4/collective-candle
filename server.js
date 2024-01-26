@@ -20,14 +20,14 @@ app.use(express.json());
 app.use(express.static("../client/src"));
 
 // MySQL Database access
-const mysql = require('mysql');
+const mysql = require('mysql2');
 
 // Details of the MySQL DB connection
 const conn = mysql.createConnection({
     host: process.env.DB_HOST,
     user: process.env.DB_USER,
     password: process.env.DB_KEY,
-    database: process.env.DB,
+    database: process.env.DB_NAME,
     multipleStatements: true
   });
 

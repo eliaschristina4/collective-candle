@@ -13,8 +13,20 @@ export default function Shop () {
     useEffect(() => {
         fetchInventory();
     }, []);
+
+    async function fetchInventory() {
+        const endpoint = 'http://localhost:3000/db';
+        const response = await fetch(endpoint);
+       // console.log(response);
+
+        const data = await response.json();
+       // console.log(data)
+
+        setInventory(data); // setting data to inventory variable
+        setFiltered(data); // setting data to filtered variable as default
+    }
     
-    function fetchInventory(){ // fetching from mysql db
+   /*  function fetchInventory(){ // fetching from mysql db
         fetch('/db')
             .then((response) => response.json())
             .then((data) => {
@@ -26,7 +38,7 @@ export default function Shop () {
             .catch(err => console.log(err));
 
         
-    }
+    } */
 
         if (!inventory){
             return <h1>Our inventory is loading...</h1>    
