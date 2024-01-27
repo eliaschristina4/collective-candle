@@ -1,8 +1,9 @@
-import { useState, useEffect } from 'react';
+import { useEffect } from 'react';
 import './Filter.css';
 
 export default function Filter({setActive, active, setFiltered, filtered, setInventory, inventory}){
 
+    
     useEffect(() => {
         if(active === '*'){
             setFiltered(inventory);
@@ -12,7 +13,7 @@ export default function Filter({setActive, active, setFiltered, filtered, setInv
         const filtered = inventory.filter((product) => product.productCategory.includes(active))
 
         setFiltered(filtered);
-
+        // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [active]);
 
     return (
