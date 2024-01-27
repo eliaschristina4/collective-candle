@@ -1,5 +1,3 @@
-![Logo](https://main.d2jswoeniequ40.amplifyapp.com/images/logo/logo-stacked.png)
-
 # Collective Candle Co. 2.0
 
 Collective Candle Co. is an online, local business that sells candles and related accessories. 
