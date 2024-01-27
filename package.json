@@ -4,9 +4,9 @@
   "description": "![Logo](https://main.d2jswoeniequ40.amplifyapp.com/images/logo/logo-stacked.png)",
   "main": "server.js",
   "scripts": {
-    "dev": "nodemon server.js",
-    "start": "nodemon server.js",
-    "server": "nodemon server.js --ignore client",
+    "dev": "nodemon ./server/server.js",
+    "start": "nodemon ./server/server.js",
+    "server": "nodemon ./server/server.js --ignore client",
     "build": "npm i"
   },
   "repository": {
