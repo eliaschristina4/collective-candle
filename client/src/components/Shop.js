@@ -15,7 +15,7 @@ export default function Shop () {
     }, []);
 
     async function fetchInventory() {
-        const endpoint = 'http://localhost:3000/db';
+        const endpoint = '/db';
         const response = await fetch(endpoint);
        // console.log(response);
 
