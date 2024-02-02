@@ -15,7 +15,7 @@ export default function Shop () {
     }, []);
 
     async function fetchInventory() {
-        const endpoint = 'https://collective-candle.onrender.com/db';
+        const endpoint = '/db';
         const response = await fetch(endpoint);
        // console.log(response);
 
