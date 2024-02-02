@@ -38,7 +38,7 @@ conn.connect(function(err) {
 });
   
 // Get request and query inside db
-app.get('/db', (req, res) => {
+app.get('https://collective-candle.onrender.com/db', (req, res) => {
     conn.query("SELECT * FROM inventory;", (err, results, fields) => {
         if(err) throw err;
         res.send(results);
