@@ -9,7 +9,14 @@ const PORT = process.env.PORT || 3000;
 
 // Enabling support to the Cross-Origin Resource Sharing protocol
 const cors = require('cors');
-app.use(cors());
+// app.use(cors());
+const corsOptions ={
+    origin:'*', 
+    credentials:true,            //access-control-allow-credentials:true
+    optionSuccessStatus:200,
+ }
+ 
+ app.use(cors(corsOptions))
 
 // Enabling use of and access to .env file
 require('dotenv').config();
